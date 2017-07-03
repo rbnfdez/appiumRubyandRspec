@@ -3,7 +3,7 @@
 describe 'testing Login' do
 
   before(:all) {
-    LoginPage.new(@driver).do_login("frank","papapa22")
+    LoginPage.new(@driver).do_login("XXX","XXX")
 
   }
     
