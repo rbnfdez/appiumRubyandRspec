@@ -3,7 +3,8 @@
 describe 'testing Login' do
 
   before(:all) {
-    LoginPage.new(@driver).do_login("XXX","XXX")
+    @loginpage = LoginPage.new(@driver)
+    @loginpage.do_login("frank","papapa22")
 
   }
     
@@ -12,7 +13,7 @@ describe 'testing Login' do
     it "login is correct" do
       #expect(find.element_by('footer_container'))
       #expect(get_footer).to exist
-      wait_for(get_footer).to exist
+      @loginpage.wait_for{get_footer}.to exist
     end
 
     #it "should enter an email address" do

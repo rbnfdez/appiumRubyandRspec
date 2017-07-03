@@ -15,7 +15,8 @@ Dir["./page_objects/**/*.rb"].each { |f| require f }
 Dir["./lib/*.rb"].each { |f| require f }
 
 # Configure call to Appium Server
-# More information is available at http://appium.io/slate/en/master/?ruby#appium-server-capabilities.
+
+config.before(:all){
       desired_caps = {
          caps:  {
               platformName:    'Android',
@@ -41,4 +42,9 @@ Dir["./lib/*.rb"].each { |f| require f }
       # After promoting to a class instance method we can the method directly, example:
       #   find_element(:id, 'lst-ib')
       Appium.promote_appium_methods Object
+    }
+
+    config.after(:all){
+      @driver.quit
+    }
 end
