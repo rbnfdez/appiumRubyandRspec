@@ -2,4 +2,4 @@
 
 run the following command:
 
-- bundle exec rspec spec/login_spec.rb -rbyebug
+- bundle exec rspec spec/xxx.rb -rbyebug
