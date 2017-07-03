@@ -16,8 +16,8 @@ describe 'testing Login' do
     end
 
     #it "should enter an email address" do
-      #@app.passwordInput.send_keys("papapa22")
-      #expect(@app.passwordInput.text == "papapa22")
+      #@app.passwordInput.send_keys("xxxx")
+      #expect(@app.passwordInput.text == "xxxx")
     #end
   end
 end
